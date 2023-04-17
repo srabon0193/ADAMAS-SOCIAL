@@ -73,7 +73,7 @@ const Post = ({ post }) => {
       <div className="container">
         <div className="user">
           <div className="userInfo">
-            <img src={"http://localhost:3000/upload/"+post.profilePic} alt="" />
+            <img src={"/upload/"+post.profilePic} alt="" />
             <div className="details">
               <Link
                 to={`/profile/${post.userId}`}
@@ -112,7 +112,7 @@ const Post = ({ post }) => {
             {comdata && comdata.length} Comments
           </div>
           <div className="item" >
-           <button  class="default" onClick={()=> setOpenSharing(true)}> <ShareOutlinedIcon /> </button> 
+           <button  class="btn default" onClick={()=> setOpenSharing(true)}> <ShareOutlinedIcon /> </button> 
             {openSharing && <Sharing post={post} setOpenSharing={setOpenSharing}/>}
           </div>
         </div>
