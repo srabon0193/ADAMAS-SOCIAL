@@ -1,0 +1,75 @@
+.sharing {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 9999;
+  
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: transparent;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+  
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+  
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  
+    &__button--email {
+      background-color: #d44638;
+    }
+  
+    &__button--facebook {
+      background-color: #3b5998;
+    }
+  
+    &__button--twitter {
+      background-color: #1da1f2;
+    }
+  
+    &__button--whatsapp {
+      background-color: #25d366;
+    }
+  
+    &__button--copy {
+      margin-top: 1px;
+    }
+  
+    &__close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff0909;
+      background-color: transparent;
+      border: solid;
+      cursor: pointer;
+  
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+  

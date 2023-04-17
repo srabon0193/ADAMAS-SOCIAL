@@ -1,0 +1,96 @@
+.register {
+  height: 100vh;
+  background-image:linear-gradient(to bottom, rgb(239, 242, 245) ,rgb(118, 106, 223));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background:linear-gradient(to bottom, rgba(0, 0, 0, 0.603), rgba(12, 11, 19, 0.5)),
+        url("file:///D:/Major%20Project/au2.jpg")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+     
+
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      h2 {
+        font-size: 100%;
+        line-height: 100%;
+      }
+      
+      p {
+        font-size:16px;
+      }
+
+      
+      span {
+        font-size: 14px;
+      }
+      
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: rgb(196, 211, 233);
+        color: rgb(72, 61, 168);
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+      color: rgb(111, 105, 117);
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+        input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 10px;
+        }
+        
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: rgb(124, 113, 215);
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
