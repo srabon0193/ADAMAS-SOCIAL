@@ -23,6 +23,12 @@
     .container {
       padding: 20px;
 
+      .logo{
+        width: 40%;
+        height: 30%;
+        margin-left: 30%;
+      }
+
       .item {
         -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
         -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
@@ -31,10 +37,19 @@
         margin-bottom: 20px;
         background-color: themed("bg");
 
+        .logos{
+          width: 10%;
+          padding-right: 5%;
+          display: flex;
+        }
+       
         span {
-          color: gray;
+          color: rgb(101, 220, 241);
+          font-weight: bold;
+          font-size: 150%;
         }
 
+       
         .user {
           display: flex;
           align-items: center;
@@ -46,52 +61,22 @@
             align-items: center;
             gap: 20px;
             position: relative;
-
-            img {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              object-fit: cover;
-            }
-
-            .online {
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              background-color: limegreen;
-              position: absolute;
-              top: 0;
-              left: 30px;
-            }
-
             p {
               color: themed("textColorSoft");
+              font-size: 80%;
             }
 
             span {
-              font-weight: 500;
+              font-weight: bold;
+              font-size: 120%;
               color: themed("textColor");
+              gap: 10px;
             }
-          }
 
-          .buttons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            .check{
+              width: 15px;
+              padding-right: 2%;
 
-            button {
-              border: none;
-              padding: 5px;
-              color: white;
-              cursor: pointer;
-
-              &:first-child {
-                background-color: #5271ff;
-              }
-
-              &:last-child {
-                background-color: #f0544f;
-              }
             }
           }
         }

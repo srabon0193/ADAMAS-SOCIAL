@@ -1,12 +1,12 @@
 import "./profile.scss";
-import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import TwitterIcon from "@mui/icons-material/Twitter";
+// import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import PinterestIcon from "@mui/icons-material/Pinterest";
+// import TwitterIcon from "@mui/icons-material/Twitter";
 import PlaceIcon from "@mui/icons-material/Place";
-import LanguageIcon from "@mui/icons-material/Language";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+// import LanguageIcon from "@mui/icons-material/Language";
+import OtherHousesIcon from '@mui/icons-material/OtherHouses';import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Posts from "../../components/posts/Posts";
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
@@ -23,7 +23,7 @@ const Profile = () => {
 
   const userId = parseInt(useLocation().pathname.split("/")[2]);
 
-  const { isLoading, error, data } = useQuery(["user"], () =>
+  const { isLoading, data } = useQuery(["user"], () =>
     makeRequest.get("/users/find/" + userId).then((res) => {
       return res.data;
     })
@@ -69,7 +69,7 @@ const Profile = () => {
           <div className="profileContainer">
             <div className="uInfo">
               <div className="left">
-                <a href="http://facebook.com">
+                {/* <a href="http://facebook.com">
                   <FacebookTwoToneIcon fontSize="large" />
                 </a>
                 <a href="http://facebook.com">
@@ -83,7 +83,7 @@ const Profile = () => {
                 </a>
                 <a href="http://facebook.com">
                   <PinterestIcon fontSize="large" />
-                </a>
+                </a> */}
               </div>
               <div className="center">
                 <span>{data.name}</span>
@@ -93,7 +93,7 @@ const Profile = () => {
                     <span>{data.city}</span>
                   </div>
                   <div className="item">
-                    <LanguageIcon />
+                    <OtherHousesIcon />
                     <span>{data.website}</span>
                   </div>
                 </div>

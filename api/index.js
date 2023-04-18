@@ -9,6 +9,7 @@ import relationshipRoutes from "./routes/relationships.js";
 import cors from "cors";
 import multer from "multer";
 import cookieParser from "cookie-parser";
+import searchRoutes from "./routes/search.js"
 
 //MIDDLEWARES
 app.use((req, res, next) => {
@@ -34,6 +35,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+
 app.post("/api/upload", upload.single("file"), (req, res) => {
   const file = req.file;
   res.status(200).json(file.filename);
@@ -45,6 +47,8 @@ app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/likes", likeRoutes);
 app.use("/api/relationships", relationshipRoutes);
+app.use("/api/search", searchRoutes);
+
 app.listen(8800, () => {
   console.log("API working!");
 });
